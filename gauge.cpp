@@ -2,7 +2,7 @@
 
 // Define copy assignment operator.
 
-SU2_mat::SU2_mat(double _c0 = 1, double _c1 = 0, double _c2 = 0, double _c3 = 0)
+SU2_mat::SU2_mat(double _c0, double _c1, double _c2, double _c3)
 {
     c0 = _c0;
     c1 = _c1;
@@ -30,25 +30,25 @@ SU2_mat SU2_mat::operator*(SU2_mat const &obj)
     return SU2_mat(res_c0, res_c1, res_c2, res_c3);
 }
 
-SU2_mat operator*(SU2_mat const &obj, double const &i)
-{
-    return SU2_mat(obj.c0 * i, obj.c1 * i, obj.c2 * i, obj.c3 * i);
-}
+// SU2_mat operator*(SU2_mat const &obj, double const &i)
+// {
+//     return SU2_mat(obj.c0 * i, obj.c1 * i, obj.c2 * i, obj.c3 * i);
+// }
 
-SU2_mat operator*(SU2_mat const &obj, double const &i)
-{
-    return i * obj;
-}
+// SU2_mat operator*(SU2_mat const &obj, double const &i)
+// {
+//     return i * obj;
+// }
 
-SU2_mat operator/(SU2_mat const &obj, double const &i)
-{
-    return SU2_mat(obj.c0 / i, obj.c1 / i, obj.c2 / i, obj.c3 / i);
-}
+// SU2_mat operator/(SU2_mat const &obj, double const &i)
+// {
+//     return SU2_mat(obj.c0 / i, obj.c1 / i, obj.c2 / i, obj.c3 / i);
+// }
 
-SU2_mat operator/(SU2_mat const &obj, double const &i)
-{
-    return i / obj;
-}
+// SU2_mat operator/(SU2_mat const &obj, double const &i)
+// {
+//     return i / obj;
+// }
 
 SU2_mat SU2_mat::dag()
 {
