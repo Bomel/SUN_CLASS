@@ -1,6 +1,5 @@
 #ifndef GAUGE_H
 #define GAUGE_H
-#include <iostream>
 
 class SU2_mat
 {

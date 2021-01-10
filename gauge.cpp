@@ -1,7 +1,5 @@
 #include "gauge.h"
 
-// Define copy assignment operator.
-
 SU2_mat::SU2_mat(double _c0, double _c1, double _c2, double _c3)
 {
     c0 = _c0;
