@@ -33,10 +33,10 @@ void SU2_mat::operator-=(SU2_mat const &obj)
 SU2_mat SU2_mat::operator*(SU2_mat const &obj)
 {
     double res_c0, res_c1, res_c2, res_c3;
-    res_c0 = c0 * obj.c0 + c1 * obj.c1 + c2 * obj.c2 + c3 * obj.c3;
-    res_c1 = c0 * obj.c1 + c1 * obj.c1 + c2 * obj.c3 + c3 * obj.c2;
-    res_c2 = c0 * obj.c2 + c1 * obj.c3 + c2 * obj.c0 + c3 * obj.c1;
-    res_c3 = c0 * obj.c3 + c1 * obj.c2 + c2 * obj.c1 + c3 * obj.c0;
+    res_c0 = c0 * obj.c0 - c1 * obj.c1 - c2 * obj.c2 - c3 * obj.c3;
+    res_c1 = c0 * obj.c1 + c1 * obj.c1 - c2 * obj.c3 + c3 * obj.c2;
+    res_c2 = c0 * obj.c2 + c1 * obj.c3 + c2 * obj.c0 - c3 * obj.c1;
+    res_c3 = c0 * obj.c3 - c1 * obj.c2 + c2 * obj.c1 + c3 * obj.c0;
     return SU2_mat(res_c0, res_c1, res_c2, res_c3);
 }
 
