@@ -19,6 +19,8 @@ public:
 
     SU2_mat dag();
 
+    SU2_mat unit();
+
     double trace();
 
     void mk_dble_array_sun(double u[4]);

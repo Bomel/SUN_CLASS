@@ -58,6 +58,11 @@ SU2_mat SU2_mat::dag()
     return SU2_mat(c0, -c1, -c2, -c3);
 }
 
+SU2_mat SU2_mat::unit()
+{
+    return SU2_mat(1.0, 0.0, 0.0, 0.0);
+}
+
 double SU2_mat::trace()
 {
     return 2 * c0;
