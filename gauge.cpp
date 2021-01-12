@@ -45,6 +45,16 @@ void SU2_mat::operator*=(SU2_mat const &obj)
     *this = *this * obj;
 }
 
+void SU2_mat::operator*=(double const &i)
+{
+    return *this = *this * i;
+}
+
+void SU2_mat::operator/=(double const &i)
+{
+    return *this = *this / i;
+}
+
 void SU2_mat::operator=(SU2_mat const &obj)
 {
     c0 = obj.c0;
@@ -68,12 +78,22 @@ double SU2_mat::trace()
     return 2 * c0;
 }
 
+double SU2_mat::det()
+{
+    return fabs(c0 * c0 + c1 * c1 + c2 * c2 + c3 * c3);
+}
+
 void SU2_mat::mk_dble_array_sun(double u[4])
 {
     c0 = u[0];
     c1 = u[1];
     c2 = u[2];
     c3 = u[3];
+}
+
+void SU2_mat::project_to_sun()
+{
+    *this /= sqrt((*this).det());
 }
 
 SU2_mat operator*(SU2_mat const &obj, double const &i)

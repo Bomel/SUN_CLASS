@@ -1,6 +1,8 @@
 #ifndef GAUGE_H
 #define GAUGE_H
 
+#include <cmath>
+
 class SU2_mat
 {
 public:
@@ -14,6 +16,8 @@ public:
     void operator-=(SU2_mat const &obj);
     SU2_mat operator*(SU2_mat const &obj);
     void operator*=(SU2_mat const &obj);
+    void operator*=(double const &i);
+    void operator/=(double const &i);
 
     void operator=(SU2_mat const &obj);
 
@@ -23,7 +27,11 @@ public:
 
     double trace();
 
+    double det();
+
     void mk_dble_array_sun(double u[4]);
+
+    void project_to_sun();
 };
 
 SU2_mat operator*(SU2_mat const &obj, double const &i);
