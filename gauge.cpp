@@ -103,7 +103,7 @@ SU2_mat operator*(SU2_mat const &obj, double const &i)
 
 SU2_mat operator*(double const &i, SU2_mat const &obj)
 {
-    return i * obj;
+    return obj * i;
 }
 
 SU2_mat operator/(SU2_mat const &obj, double const &i)
