@@ -1,4 +1,4 @@
-#include "gauge.h"
+#include "gauge.hpp"
 
 SU2_mat::SU2_mat() {}
 
