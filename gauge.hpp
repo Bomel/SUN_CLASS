@@ -1,5 +1,5 @@
-#ifndef GAUGE_H
-#define GAUGE_H
+#ifndef GAUGE_HPP
+#define GAUGE_HPP
 
 #include <cmath>
 
