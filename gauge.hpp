@@ -9,6 +9,7 @@ public:
     double c0, c1, c2, c3;
     SU2_mat(double c0, double c1, double c2, double c3);
     SU2_mat();
+    SU2_mat(SU2_mat const &obj);
 
     SU2_mat operator+(SU2_mat const &obj);
     void operator+=(SU2_mat const &obj);

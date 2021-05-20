@@ -2,6 +2,14 @@
 
 SU2_mat::SU2_mat() {}
 
+SU2_mat::SU2_mat(SU2_mat const &obj)
+{
+    c0 = obj.c0;
+    c1 = obj.c1;
+    c2 = obj.c2;
+    c3 = obj.c3;
+}
+
 SU2_mat::SU2_mat(double _c0, double _c1, double _c2, double _c3)
 {
     c0 = _c0;
